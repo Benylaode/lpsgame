@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.5.0"
+    }
+  },
+  "routes": [
+    { "src": "/admin", "dest": "/api/admin.php" },
+    { "src": "/game", "dest": "/api/game.php" },
+    { "src": "/", "dest": "/api/index.php" },
+    { "src": "/materi", "dest": "/api/materi.php" },
+    { "src": "/quiz", "dest": "/api/quiz.php" },
+    { "src": "/result", "dest": "/api/result.php" },
+    { "src": "/skor", "dest": "/api/skor.php" },
+    { "src": "/tentang", "dest": "/api/tentang.php" },
+    { "src": "/user", "dest": "/api/user.php" },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ]
+}
